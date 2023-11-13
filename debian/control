@@ -1,0 +1,18 @@
+Source: alsa-scarlett-gui
+Maintainer: Dale Richards <dale@dalerichards.net>
+Section: sound
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.2
+Homepage: https://github.com/geoffreybennett/alsa-scarlett-gui
+Rules-Requires-Root: no
+
+Package: alsa-scarlett-gui
+Architecture: any
+Multi-Arch: foreign
+Depends: ${misc:Depends},
+         ${shlibs:Depends}
+Description: Gtk4 GUI for the Focusrite Scarlett/Clarett ALSA controls
+ This package contains a Gtk4 GUI for the ALSA controls
+ exposed by the Focusrite Scarlett/Clarett kernel driver
+

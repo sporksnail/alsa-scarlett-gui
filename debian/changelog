@@ -1,0 +1,5 @@
+alsa-scarlett-gui (0.2.32-1) UNRELEASED; urgency=low
+
+  * Initial release. Closes: #1036223
+
+ -- Dale Richards <dale@dalerichards.net>  Sun, 12 Nov 2023 21:03:45 +0000

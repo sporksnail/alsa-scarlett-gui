@@ -1,0 +1,19 @@
+debian/copyright:
+	* Clean up file definitions
+	* Remove common licenses
+	* Check all files are covered correctly
+
+manpages:
+	* Ensure manpage is included in package
+	* Forward upstream?
+
+debian/rules:
+	* Remove unnecessary options
+
+debian/watch:
+	* What is a watch file?
+
+general:
+	* Convert to git package development
+	* Upload to Salsa
+	* Reach out to upstream dev

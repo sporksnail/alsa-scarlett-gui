@@ -1,0 +1,60 @@
+--- /dev/null
++++ b/doc/man/alsa-scarlett-gui.1
+@@ -0,0 +1,57 @@
++.\" Debian manpage for alsa-scarlett-gui
++.\" Contact dale@dalerichards.net to correct errors or typos.
++.TH alsa-scarlett-gui 1 "08 Nov 2023" "0.2.32-1" "alsa-scarlett-gui man page"
++.SH NAME
++	\fBalsa-scarlett-gui\fP \- Gtk4 GUI for the ALSA controls presented by the Focusrite Scarlett/Clarett kernel driver
++.
++.SH SYNOPSIS
++.SY alsa-scarlett-gui
++.RI [ FILE ]
++.YS
++.
++.SH DESCRIPTION
++	\fBalsa-scarlett-gui\fP is a Gtk4 GUI for the ALSA controls presented by the Linux kernel Focusrite Scarlett Gen 2/3/Clarett USB/Clarett+ Mixer Driver.
++.sp
++	The Focusrite USB audio interfaces are class compliant meaning that they work "out of the box" on Linux as audio and MIDI interfaces (although on Gen 3 you need to disable MSD mode first for full functionality). However, except for some of the smallest models, they have a bunch of proprietary functionality that required a kernel driver to be written specifically for those devices.
++.sp
++	Linux kernel support ("ALSA Focusrite Scarlett Gen 2/3 Mixer Driver") for the proprietary functionality was first added in:
++.sp
++.IP \[bu]
++Scarlett Gen 2: Linux 5.4 (bugs fixed in Linux 5.14)
++.IP \[bu]
++Scarlett Gen 3: Linux 5.14
++.IP \[bu]
++Clarett+ 8Pre: Linux 6.1
++.IP \[bu]
++Clarett 2Pre/4Pre/8Pre USB, Clarett+ 2Pre/4Pre: coming soon
++.sp
++For full documentation, see: 
++.UR https://\:github\:.com/\:geoffreybennett/\:alsa\-scarlett\-gui
++.UE .
++.SH OPTIONS
++	\fIFILE\fP
++		Load the specified .state file on start
++.SH BUGS
++.IP \[bu]
++The linear-dB scale of the volume controls doesn't work well. Lower volumes (e.g. below -30dB) don't need as much fine control as higher volumes.
++.IP \[bu]
++Can’t select (focus) the gain/volume controls or use a keyboard to adjust them.
++.IP \[bu]
++Level (monitoring) doesn't work yet and is disabled (needs kernel driver update).
++.IP \[bu]
++Load/Save uses alsactl which will be confused if the ALSA interface name (e.g. USB) changes.
++.IP \[bu]
++Load/Save is not implemented for simulated interfaces.
++.IP \[bu]
++Lots of "couldn't find weak ref" warnings are emitted when loading a state file for simulation.
++.IP \[bu]
++The read-only status of controls in interface simulation mode does not change when the HW/SW button is clicked.
++.IP \[bu]
++When there's more than one main window open, closing one of them doesn't free and close everything related to that card.
++.IP \[bu]
++There is no facility to group channels into stereo pairs (needs kernel support to save this information in the interface).
++.IP \[bu]
++There is no facility to give channels custom names (needs kernel support to save this information in the interface).
++.IP \[bu]
++No keyboard accelerators (e.g. Ctrl\-Q to quit) have been implemented.
++
