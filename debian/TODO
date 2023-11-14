@@ -1,3 +1,6 @@
+debian/control:
+	* Depends: linux
+
 debian/copyright:
 	* Clean up file definitions
 	* Remove common licenses
