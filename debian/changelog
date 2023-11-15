@@ -1,5 +1,6 @@
-alsa-scarlett-gui (0.3-2-1) UNRELEASED; urgency=low
+alsa-scarlett-gui (0.3.1-1) UNRELEASED; urgency=low
 
   * Initial release. Closes: #1036223
+  * Add man page.
 
  -- Dale Richards <dale@dalerichards.net>  Tue, 14 Nov 2023 22:33:42 +0000
